@@ -1,8 +1,8 @@
-🌲 Santa 2025 Tree Packing Solver (Simulated Annealing & Multiprocessing)
+# Santa 2025 Tree Packing Solver (Simulated Annealing & Multiprocessing)
 
 This project implements a high-performance solver for the tree packing problem, aiming to place $N$ unique tree shapes within the smallest possible square boundary without overlaps. It utilizes a highly optimized Simulated Annealing (SA) core and parallelizes the workload across multiple CPU cores using Python's multiprocessing.
 
-🚀 Key Features
+# Key Features
 
 Multiprocessing: Solves multiple $N$ values concurrently to maximize throughput.
 
@@ -12,7 +12,7 @@ Adaptive Shrink Strategy: Uses an aggressive shrink/retry loop to find the theor
 
 Optimized Start: Uses a lattice initialization mode for large $N$ to quickly find a valid, dense starting configuration.
 
-📁 Project Structure
+# Project Structure
 
 The solution is organized into three primary modules:
 
@@ -36,14 +36,14 @@ submission_final_run.csv
 
 Output file containing the final calculated coordinates and rotations for all solved $N$ values.
 
-🛠️ Setup and Dependencies
+# Setup and Dependencies
 
 This project requires Python 3.8+ and the following libraries:
 
 pip install numpy pandas shapely tqdm
 
 
-▶️ How to Run
+# How to Run
 
 Execute the main script. It will automatically load any previous results from submission_final_run.csv and begin solving the remaining problems concurrently.
 
@@ -56,7 +56,7 @@ The output verbosity is automatically suppressed within worker processes to prev
 
 The system dynamically reduces the number of retries for small $N$ (e.g., $N \le 3$) to prevent unnecessary, long runs on trivial cases.
 
-⚙️ Optimization Strategy Highlights
+# Optimization Strategy Highlights
 
 Iterative Squeeze: The main loop repeatedly attempts to pack the previous best solution into a box reduced by a SHRINK_RATE (e.g., 0.98 or 0.99).
 

@@ -1,0 +1,7 @@
+submission.csv
+submission1.csv
+submission2.csv
+auto_shrink.py
+fast.py
+__pycache__/
+*.pyc
